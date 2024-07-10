@@ -36,46 +36,6 @@ export const carouselData: iCarousel[] = [
       "starting from N1,500 per meal",
     ],
   },
-  {
-    img: "/assets/local.webp",
-    em: "Local",
-    b: "champion",
-    list: [
-      "weekly meal plan",
-      "budgeted meals to fill you belly and make your pockets smile",
-      "starting from N1,500 per meal",
-    ],
-  },
-  {
-    img: "/assets/local.webp",
-    em: "Local",
-    b: "champion",
-    list: [
-      "weekly meal plan",
-      "budgeted meals to fill you belly and make your pockets smile",
-      "starting from N1,500 per meal",
-    ],
-  },
-  {
-    img: "/assets/local.webp",
-    em: "Local",
-    b: "champion",
-    list: [
-      "weekly meal plan",
-      "budgeted meals to fill you belly and make your pockets smile",
-      "starting from N1,500 per meal",
-    ],
-  },
-  {
-    img: "/assets/local.webp",
-    em: "Local",
-    b: "champion",
-    list: [
-      "weekly meal plan",
-      "budgeted meals to fill you belly and make your pockets smile",
-      "starting from N1,500 per meal",
-    ],
-  },
 ];
 
 export const infoData: iInfo[] = [

@@ -7,6 +7,7 @@ import { BiCheckCircle } from "react-icons/bi";
 import { iCarousel } from "@/public/interfaces";
 import Container from "./Container";
 import Button from "./re-usables/Button";
+import { BsArrowRight } from "react-icons/bs";
 
 const Discover = () => {
   const [sliderRef] = useKeenSlider({
@@ -18,10 +19,10 @@ const Discover = () => {
         slides: { perView: 2, spacing: 16 },
       },
       "(min-width: 1024px)": {
-        slides: { perView: 3, spacing: 16 },
+        slides: { perView: 2, spacing: 16 },
       },
       "(min-width: 1280px)": {
-        slides: { perView: 4, spacing: 16 },
+        slides: { perView: 2, spacing: 16 },
       },
     },
   });
@@ -33,20 +34,20 @@ const Discover = () => {
           <h1 className="mt-[200px] text-white font-bold capitalize text-[50px] md:text-[70px] leading-[60px]">
             discover personalized <br /> nutrition
           </h1>
-          <Button className="bg-white text-primary mt-3 text-[24px]">
-            Create Meal Plan
+          <Button className="bg-white text-primary mt-3 text-[24px] flex items-center gap-3">
+            Our Meal Plan <BsArrowRight size={24} />
           </Button>
         </center>
 
-        <Container className=" z-50">
+        <Container className=" z-50 w-full flex justify-center">
           <div
             ref={sliderRef}
-            className="keen-slider mt-10 lg:ml-7 cursor-pointer"
+            className=" mt-10 w-[70%] cursor-pointer flex items-center gap-5 "
           >
             {carouselData.map((el: iCarousel, i: number) => (
               <div
                 key={i}
-                className="keen-slider__slide w-[450px] h-[600px] bg-white rounded-[40px]"
+                className="keen-slider__slide  h-[600px] bg-white rounded-[40px]"
               >
                 <div className="h-1/2 w-full">
                   <Image

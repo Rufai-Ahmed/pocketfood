@@ -5,18 +5,25 @@ import Container from "./Container";
 import Button from "./re-usables/Button";
 import Galano from "next/font/local";
 import Image from "next/image";
-const galano = Galano({
+import { NextFont } from "next/dist/compiled/@next/font";
+const galano: NextFont = Galano({
   src: "../../public/fonts/GalanoGrotesqueExtraBold.woff2",
 });
 
 const Hero = () => {
   const hText = [
-    "Busy Week?",
-    "unexpected visitors?",
-    "date night?",
-    "health goals?",
-    "team meeting?",
+    "Hungry for something new?",
+    "Craving comfort food?",
+    "Planning a party?",
+    "Need a quick meal?",
+    "Looking for healthy options?",
+    "Hosting a family dinner?",
+    "Want to impress guests?",
+    "In the mood for dessert?",
+    "Need a snack?",
+    "Trying a new diet?",
   ];
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -40,7 +47,7 @@ const Hero = () => {
           >
             {hText[index]}
           </motion.h1>
-          <Button className="text-[20px] mt-10">Get Meals Sorted</Button>
+          <Button className="text-[20px] mt-10">Get Your Meal</Button>
         </center>
 
         <center className="relative z-50">
