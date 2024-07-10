@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="flex items-center justify-center flex-col overflow-x-hidden py-12">
-      <Container className="min-h-[300px] flex items-start justify-between">
+      <Container className="min-h-[300px] flex items-start gap-8 flex-wrap md:flex-nowrap justify-between">
         <div className="flex items-center gap-3">
           <BsTwitterX size={24} />
           <BsInstagram size={24} />

@@ -15,7 +15,7 @@ const MobileSideBar: FC<{ toggle: boolean; onToggle: () => void }> = ({
   return (
     <aside
       className={`w-full p-10 bg-white duration-300 inset-full h-screen z-[9999] fixed md:hidden top-0  ${
-        toggle ? " right-[700px]" : "left-0"
+        !toggle ? " right-[700px]" : "left-0"
       }`}
     >
       <div className="flex justify-between items-center">
