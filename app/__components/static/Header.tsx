@@ -1,12 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Container from "../Container";
 import Image from "next/image";
 import { navData } from "@/public/data/data";
 import { iNav } from "@/public/interfaces";
 import Link from "next/link";
 import Button from "../re-usables/Button";
+import { BiMenu } from "react-icons/bi";
+import MobileSideBar from "./MobileSideBar";
 
 const Header = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  const onToggle: () => void = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <header className="w-full flex items-center h-[90px] justify-center">
       <Container>
@@ -19,7 +28,7 @@ const Header = () => {
             alt="logo"
           />
 
-          <nav className="font-black text-[21px] capitalize flex items-center gap-6">
+          <nav className="font-black hidden md:flex text-[21px] capitalize items-center gap-6">
             {navData.map((el: iNav, i: number) => (
               <ul key={i}>
                 <li>
@@ -28,8 +37,12 @@ const Header = () => {
               </ul>
             ))}
 
-            <Button>Get Started</Button>
+            <Button className="hidden md:block">Get Started</Button>
           </nav>
+
+          <BiMenu size={34} onClick={onToggle} className="md:hidden" />
+
+          <MobileSideBar onToggle={onToggle} toggle={toggle} />
         </div>
       </Container>
     </header>

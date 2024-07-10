@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Darker_Grotesque } from "next/font/google";
 import "./globals.css";
 import Header from "./__components/static/Header";
-import "swiper/swiper-bundle.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Footer from "./__components/static/Footer";
 
 const inter = Darker_Grotesque({ subsets: ["latin"] });
 
@@ -21,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

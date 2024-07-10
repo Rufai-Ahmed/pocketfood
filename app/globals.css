@@ -16,3 +16,12 @@
   border-radius: 40px; /* Rounded corners for the thumb */
   border: 5px solid #ffb6c1; /* Simulate padding by using a border */
 }
+
+.bg-right-more {
+  background-position: right 10%; /* Adjust this value as needed */
+}
+
+::selection {
+  color: white;
+  background-color: #a71b31;
+}

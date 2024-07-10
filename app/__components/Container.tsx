@@ -2,7 +2,12 @@ import { iContainer } from "@/public/interfaces";
 import React, { FC, PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-const Container: FC<iContainer> = ({ children, className, ...props }) => {
+const Container: FC<iContainer> = ({
+  children,
+  className,
+  style,
+  ...props
+}) => {
   return (
     <main
       {...props}

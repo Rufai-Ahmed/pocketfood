@@ -36,20 +36,20 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 1 }}
-            className={`${galano.className} text-[56px] w-full font-[700] text-primary`}
+            className={`${galano.className} text-[40px] leading-[1] md:text-[56px] w-full font-[700] text-primary`}
           >
             {hText[index]}
           </motion.h1>
           <Button className="text-[20px] mt-10">Get Meals Sorted</Button>
         </center>
 
-        <center className="relative">
+        <center className="relative z-50">
           <Image
             src={"/assets/phone.webp"}
             alt="phone"
             width={100}
             unoptimized
-            className="w-[70%] object-contain h-full"
+            className="w-full md:w-[70%] object-contain h-full"
             height={100}
           />
           <Image
